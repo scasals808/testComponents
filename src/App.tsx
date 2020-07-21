@@ -1,24 +1,38 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
-import Accordion from "./components/Accordion/Accordion";
-import Rating from "./components/Rating/Rating";
+import {Accordion} from "./components/Accordion/Accordion";
+import Rating, {RatingValueType} from "./components/Rating/Rating";
+import {OnOff} from "./components/onOff/Onoff";
+import {SelfAccordion} from "./components/SelfControlledAccordion/SelfAccordion";
+import {SelfRating} from "./components/SelfControledRating/SelfRating";
+import SelfOnOff from "./components/SelfOnOff/SelfOnOff";
+
 
 function App() {
+
+   // let [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false)
+    let [ratingValue, setRatingValue] = useState<RatingValueType>(0)
+    // let [on, setOn] = useState<boolean>(true)
+
+
+
     return (
-        <div>
-            <PageTitle title={"App component"}/>
-            <PageTitle title={"Users"}/>
-            Article 1
-            <Rating value={3}/>
-            <Accordion titleValue={"Menu"} collapsed = {true}/>
-            <Accordion titleValue={"List"} collapsed = {false}/>
-            Article 2
-            <Rating value={2}/>
+        <div className='App'>
+            {/*<OnOff on={on} onChange={setOn}/>*/}
+            {/*<SelfOnOff/>*/}
+            {/*<Accordion*/}
+            {/*    titleValue={'Menu'}*/}
+            {/*    collapsed={accordionCollapsed}*/}
+            {/*    onChange={() => {setAccordionCollapsed(!accordionCollapsed)}}*/}
+            {/*    />*/}
+            {/*<SelfAccordion titleValue={'menu'}/>*/}
+            <Rating value={ratingValue} onClick={setRatingValue}/>
+            {/*<SelfRating/>*/}
         </div>
     );
 }
 
-type PageTitlePropsType ={
+type PageTitlePropsType = {
     title: string
 }
 
