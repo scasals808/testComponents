@@ -5,7 +5,7 @@ import Rating, {RatingValueType} from "./components/Rating/Rating";
 import {OnOff} from "./components/onOff/Onoff";
 import {SelfAccordion} from "./components/SelfControlledAccordion/SelfAccordion";
 import {SelfRating} from "./components/SelfControledRating/SelfRating";
-import SelfOnOff from "./components/SelfOnOff/SelfOnOff";
+import {SelfOnOff} from "./components/SelfOnOff/SelfOnOff";
 
 
 function App() {

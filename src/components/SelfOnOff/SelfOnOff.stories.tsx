@@ -15,7 +15,6 @@ export const OFFMode = () => {
     return <SelfOnOff defaultOn={false} onChange={callback}/>;
 }
 
-export const defaultInputValue = () => <input defaultValue={'yo'}/>;
 
 
 
