@@ -28,17 +28,20 @@ export const UncollapsedMode = () => <Accordion
         ]
     }
     onClick={onClickCallback}/>;
+
+
 export const ModeChanging = () => {
     const [value, setValue] = useState<boolean>(true)
+    const [items, setItems] = useState([
+        {title: 'Vova', value: 1},
+        {title: 'Valera', value: 2},
+        {title: 'Tima', value: 3}
+    ])
     return <Accordion
         titleValue={'menu'}
         collapsed={value}
         onChange={() => setValue(!value)}
-        items={[
-                {title: 'Vova', value: 1},
-                {title: 'Valera', value: 2},
-                {title: 'Tima', value: 3}
-            ]}
+        items={items}
         onClick={(value) => {
             alert(`users with ID ${value} should be happy `)
         }}/>
